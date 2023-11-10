@@ -1,0 +1,28 @@
+{
+  "name": "proyecto-cac",
+  "version": "1.0.0",
+  "description": "Proyecto CaC - Funko.\r Creando un Front para una tienda Funko como parte del Challenge integrador de CaC.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js" ,
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Proyecto-CaC/Proyecto-CaC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Proyecto-CaC/Proyecto-CaC/issues"
+  },
+  "homepage": "https://github.com/Proyecto-CaC/Proyecto-CaC#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
