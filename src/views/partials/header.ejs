@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> | Funko Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+ <!-- Header start -->
+ <header>
+    <nav class="navbar container">
+        <picture class="navbar__logo">
+            <a href="/home">
+                        
+                 <img src="/img/branding/logo_light_horizontal.svg" alt="Logotipo Funkoshop" />
+
+            </a>
+        </picture>
+      
+        <ul  class="navbar__menu">
+            <li class="navbar__item with-submenu">
+                <a  class="navbar__link with-icon" href="/shop">SHOP <iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                <ul class="submenu">
+                        <li class="submenu__item">
+                           <a href="/shop" class="submenu__link">Figuras Funko</a> 
+                        </li>
+                        <li class="submenu__item">
+                            <a href="/shop" class="submenu__link">Indumentaria</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="/shop" class="submenu__link">Pins</a>
+                        </li>
+
+                </ul>
+
+
+            </li>
+            <!--
+            <% if (locals.isLogged) { %>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/admin">ADMIN</a>
+                </li>
+                <% } %>
+            <li class="navbar__item">
+                <a class="navbar__link" href="/contact">CONTACTO</a>
+            </li>
+            <% if (locals.isLogged) { %>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/auth/logout">LOGOUT</a>
+                </li>
+                <% } %>
+                <% if (!locals.isLogged) { %>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/auth/login">LOGIN</a>
+                    </li>
+                    <% } %> -->
+            <li class="navbar__item">
+                <a  class="navbar__link"href="/contact">CONTACTO</a>
+            </li>
+            <li class="navbar__item">
+                <a  class="navbar__link"href="/auth/login">LOGIN</a>
+            </li>
+            <li class="navbar__item">
+                <a  class="navbar__cart"href="shop/cart">
+                    
+                    <img src="/img/icons/cart-icon.svg" alt="icono carrito">
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+<!-- Header end -->
+
+
+
+<!--
+  <header>
+    <nav class="navbar container">
+      <picture class="navbar__logo">
+        <a href="../../index.html">
+          <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo Funko" />
+        </a>
+      </picture>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a class="navbar__link" href="../shop/shop.html">VER TIENDA</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="../admin/admin.html">ADMIN</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="../../index.html">SALIR</a></li>
+      </ul>
+    </nav>
+  </header> 
+   Header END  -->
+
+
+
+

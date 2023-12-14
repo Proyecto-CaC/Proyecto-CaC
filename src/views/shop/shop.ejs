@@ -1,0 +1,94 @@
+
+	<%- include('../partials/header.ejs')%>
+
+    <!-- main -->
+
+    <div class="all_products_wrapper">
+		<aside class="filter_options_wrapper">
+			<form>
+				<h4 class="filter_title">BUSCAR</h4>
+				<input class="search_input" type="text" placeholder="item o categoria">
+				<h4 class="filter_title">ORDENAR POR</h4>
+				<!-- filter -->
+				<select class="filter_sort_by">
+					<option value="">Mayor a menor</option>
+					<option value="">Menor a mayor</option>
+					<option value="">Ascendente</option>
+					<option value="">Descendente</option>
+				</select> 
+				<!-- filter price-->
+				<h4 class="filter_title">PRECIO</h4>
+				<div class="filter_price">
+					<label class="minmax_price" for="min-price">MIN</label>
+					<input class="minmax_price_input" id="min-price" type="number" placeholder="0">
+					<span>-</span>
+					<label class="minmax_price" for="max-price">MAX</label>
+					<input class="minmax_price_input" id="max-price" type="number" placeholder="0">
+				</div>
+				<h4 class="filter_title">FILTRAR</h4>
+				<ul class="filter_by">
+					<li>
+						<input id="nuevos" type="checkbox">
+						<label for="nuevos">NUEVOS</label>
+					</li>
+					<li>
+						<input id="ofertas" type="checkbox">
+						<label for="ofertas">OFERTAS</label>
+					</li>
+					<li>
+						<input id="edicion-especial" type="checkbox">
+						<label for="edicion-especial">EDICION ESPECIAL</label>
+					</li>
+					<li>
+						<input id="favoritos" type="checkbox">
+						<label for="favoritos">FAVORITOS</label>
+					</li>
+				</ul>
+			</form>
+		</aside>
+		<!-- filter end-->
+
+		<main>
+
+			<ul class="products_row">
+				<% data.forEach( item => { %>
+					<li class="single_product_wrapper">
+						<article>
+							<a href="">
+								<picture>
+									<img class="card-item_img-front" src="<%= item.img_front %>" alt="<%= item.licence_description %>">
+									<img class="card-item_img-back" src="<%= item.img_back %>" alt="<%= item.licence_description %>">
+								</picture>
+								<div class="single_product_data">
+									<p class="product_subtitle"><%= item.licence_name %></p>
+									<h4 class="product_title"><%= item.product_name %></h4>
+									<p class="product_price">$<%= item.product_price %></p>
+									<p class="product_price_subtitle"><%= item.dues %> CUOTAS SIN INTERÉS</p>
+								</div>
+							</a>
+							<div class="new_product">NUEVO</div>
+						</article>
+					</li>
+			<%	}) %>
+			</ul>
+			<div class="pagination">
+                <a class="pagination__link" href="#"><</a>
+                <a class="pagination__link pagination__link--selected" href="#">1</a>
+                <a class="pagination__link" href="#">2</a>
+                <a class="pagination__link" href="#">3</a>
+                <a class="pagination__link" href="#">4</a>
+                <a class="pagination__link" href="#">5</a>
+                <a class="pagination__link" href="#">></a>
+            </div>
+		</main>
+	</div>
+
+
+
+    <%- include('../partials/footer.ejs')%>
+      <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+	  <script src="./js/glide.js"></script>
+</body>
+</html>
