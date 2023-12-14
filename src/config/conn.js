@@ -1,14 +1,14 @@
 const mysql = require('mysql2');
 
 const pool = mysql.createPool({
-port:3306,
-host:'localhost',
-user:'root',
-password:'Kravatte.55.',
-database:'funko_schema',
-    connectionLimit: 20,
+    host: process.env.HOST,
+    user: process.env.DBUSER,
+    password: process.env.DBPASS,
+    database: process.env.DB,
+    port: process.env.DBPORT,
     waitForConnections: true,
-    queueLimit: 0,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
 pool.getConnection((err, conn) => {
